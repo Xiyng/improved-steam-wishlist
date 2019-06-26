@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name     Improved Steam Wishlist
-// @version  0.1
+// @version  0.1.1
 // @author   Xiyng
+// @include  https://store.steampowered.com/wishlist/*
 // @include  https://store.steampowered.com/wishlist/profiles/*
 // @run-at   document-start
 // @require  https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
