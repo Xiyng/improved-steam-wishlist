@@ -8,6 +8,10 @@ This userscript aims to improve Steam wishlist functionality.
 
 ## Version history
 
+### 0.1.2
+
+- Refactored code to improve maintainability
+
 ### 0.1.1
 
 - Fixed the script on certain URLs
