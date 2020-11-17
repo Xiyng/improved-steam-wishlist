@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name     Improved Steam Wishlist
-// @version  0.1.2
+// @version  0.1.3
 // @author   Xiyng
 // @include  https://store.steampowered.com/wishlist/*
 // @include  https://store.steampowered.com/wishlist/profiles/*
 // @run-at   document-start
-// @require  https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
 
 "use strict";
@@ -52,13 +51,13 @@ function getCodeToInject() {
 }
 
 function injectScript(sourceCode) {
-  	const $script = $("<script></script>");
-    $script.prop("type", "text/javascript");
-    $script.text(sourceCode);
-    $("head").append($script);
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.textContent = sourceCode;
+    document.head.appendChild(script);
 }
 
-$(window).on("afterscriptexecute", event => {
+window.addEventListener("afterscriptexecute", event => {
     const scriptSource = event.target.src;
     if (scriptSource.indexOf("wishlist.js") >= 0) {
         console.log("Found wishlist.js");
